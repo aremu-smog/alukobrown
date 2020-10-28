@@ -1,0 +1,61 @@
+$green-color: #022C14;
+
+@font-face{
+    font-family: "GT Haptik";
+    src: url("../fonts/GT-Haptik-Medium.otf")
+}
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+
+
+//Utilities
+
+.row{
+    display: flex;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background: $green-color;
+    font-family: "Karla", sans-serif;
+}
+
+.landing{
+    color: #c0cac4;
+    margin-top: 35vh;
+    
+    h1{
+        font-size: 58px;
+        font-family: "GT Haptik";
+        font-weight: 500;
+        line-height: 0;
+    }
+    content p{
+        font-size: 16px;
+        line-height: 28px;
+        font-weight: 200;
+    }
+}
+
+.main-header{
+    margin-top: 85px;
+}
+
+.inner{
+        max-width: 600px;
+        margin-left: 30%;
+    }
+
+.inner-offset{
+    width: 97px;
+    flex-shrink: 0;
+    text-align: left;
+    hr{
+        width: 70px;
+        margin-top: 30px;
+        margin-left: 0;
+        border: none;
+        background: white;
+        height: 1px;
+        
+    }
+}
