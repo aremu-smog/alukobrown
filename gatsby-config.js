@@ -1,8 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Aluko Brown`,
+    description: `I’m a Product Designer based in Lagos, Nigeria, with over 
+5 years experience designing tasteful experiences for brands, products & services and a background in graphic & brand design. 
+
+I currently work on the Product team at Quidax and teach 
+UX design at Stutern.`,
+    author: `Aremu Smog`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
