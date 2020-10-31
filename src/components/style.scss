@@ -1,4 +1,5 @@
 $green-color: #022C14;
+$offset: 97px;
 
 @font-face{
     font-family: "GT Haptik";
@@ -18,6 +19,8 @@ body{
     background: $green-color;
     font-family: "Karla", sans-serif;
 }
+
+
 
 .landing{
     color: #c0cac4;
@@ -42,7 +45,7 @@ body{
 
 .inner{
         max-width: 600px;
-        margin-left: 30%;
+        margin-left: calc(25% + 97px);
     }
 
 .inner-offset{
@@ -67,5 +70,28 @@ body{
         &:last-child{
             margin-right: 0;
         }
+    }
+}
+
+
+.overlay-menu {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    background: rgba($color: red, $alpha: 0.45);
+   
+   $profile-size: 60%;
+    .profile{
+   background: rgba($color: yellow, $alpha: 0.45);
+        width: calc(25% + 457px);
+        padding-left: 97px;
+        .resume{
+            // background: blue;
+            width: 471px;
+            flex-shrink: 0;
+        }
+        
     }
 }

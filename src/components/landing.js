@@ -3,19 +3,21 @@ import LinkedInWhite from "../images/icons/linkedin-white.svg"
 import InstagramWhite from "../images/icons/instagram-white.svg"
 import TwitterWhite from "../images/icons/twitter-white.svg"
 import DribbleWhite from "../images/icons/dribble-white.svg"
-import MenuIcon from "../images/icons/menu-icon.svg"
 
+
+//Components
+import Header from "./header"
 import Icon from './icon'
 
 const Landing = ()=> {
     return(
         <main>
-            <header className="main-header row inner">
-                    <div class="inner-offset"></div>
-                    <div><img src={MenuIcon} alt="Aluko Brown" id="menu-icon" className="menu-icon" /></div>
-        </header>
+            <article className="inner">
+                <Header />  
+            </article>
         <section className="landing">
-
+            
+               
             <article className="inner">
               
                 <header><h1 className="intro">Hi, I’m Aluko Brown</h1></header>
