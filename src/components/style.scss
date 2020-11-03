@@ -21,6 +21,7 @@ body{
     padding: 0;
     background: $green-color;
     font-family: "Karla", sans-serif;
+    font-weight: normal;
 }
 
 
@@ -36,7 +37,7 @@ body{
         line-height: 0;
     }
     content p{
-        font-size: 16px;
+      
         line-height: 28px;
         font-weight: 200;
     }
@@ -117,26 +118,82 @@ body{
         width: 460px;
         background: $white;
         hr{
-            width: 40px;
+            width: 35px;
             background: $green-color;
             height: 1px;
             border: none;
             flex-shrink: 0;
-            margin-top: 35px;
-            margin-right: 10px;
+            margin-top: 15px;
+            margin-right: 20px;
         }
         .work{
+            margin-block-end: 0.5em;
             div{
 
             flex-grow: 1;
             flex-shrink: 1;
+            p{
+                margin-block-start: 0.3em;
+            }
             }
         }
         h2{
             font-family: "GT Haptik";
             font-weight: normal;
+            margin-block-start: 0;
             margin-block-end: 0em;
         }
         
     }
+}
+
+//Mobile
+
+@media  (max-width: 468px){
+    body{
+        font-size: 14px;
+    }
+    .main-header {img{width: 35px;}}
+    .inner{
+        margin-left: 58px;
+        margin-right: 90px;
+    }
+    .landing{
+        margin-top: 20vh;
+        content p {line-height: 24px;}
+        h1{
+        font-size: 28px;
+    }}
+    footer.social-icons{
+        margin-top: 30px;
+        a{margin-right: 20px;}
+        img{
+            width: 14.23px;
+        }
+    }
+    .inner-offset{
+        width: 46px; 
+        hr{
+            width: 35px;
+            margin-top: 25px;
+        }
+        }
+
+        .overlay-menu{
+            flex-direction: column;
+            overflow-x: hidden;
+            overflow-y: auto;
+            background: $white;
+            .profile{
+                padding-left: 58px;
+                width: auto;
+            }
+            .resume{
+                margin-top: -1px;
+                padding-left: 58px;
+                
+                padding-bottom: 2em;
+                hr{width: 18px;}
+            }
+        }
 }

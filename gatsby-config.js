@@ -12,6 +12,13 @@ UX design at Stutern.`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     {
+        resolve: `gatsby-source-contentful`,
+        options: {
+            spaceId : 'b0zv5j8277bx',
+            accessToken : 'EVFhU5yfc6A4ws1NEacCpO8YtZl5Rl7fx7_v8df3v9g'
+        }
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
@@ -29,7 +36,7 @@ UX design at Stutern.`,
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+         // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

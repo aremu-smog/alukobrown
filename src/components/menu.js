@@ -1,4 +1,5 @@
 import React from 'react'
+import {graphql, useStaticQuery} from 'gatsby'
 import Aluko from "../images/AlukoBrown.png"
 
 //Icons
@@ -14,6 +15,36 @@ import Header from "./header"
 import Icon from './icon'
 
 const Menu = () => {
+    const allResume = useStaticQuery( graphql `
+    query{
+        allContentfulResume(sort: {
+            fields: updatedAt,
+            order: DESC
+        }) {
+            edges {
+                node{
+                    company
+                    role
+                    startDate
+                    endDate
+                }
+            }
+        }
+    }
+    
+    `)
+
+    const works = allResume.allContentfulResume.edges.map( resume => <article className="work row">
+                    
+                        <hr/>
+                    <div>
+                        <h2>{resume.node.company}</h2>
+                        <p>{resume.node.role}<br/>
+                        <small>{resume.node.startDate} - {resume.node.endDate}</small>
+                        </p>
+                    </div>
+                    
+                </article>)
     return(
         <div className="overlay-menu row">
             
@@ -31,25 +62,14 @@ const Menu = () => {
                     <Icon alt="Dribble" icon={DribbleGreen} url="https://www.linkedin.com/in/aluko-brown/" /></span>
                     
                    
-                    <p><a href="" className="row cv" target="_blank">View my CV <img src={ArrowRight} alt="Arrow Right" /></a></p>
+                    <p><a href="#" className="row cv" target="_blank">View my CV <img src={ArrowRight} alt="Arrow Right" /></a></p>
                 </div>
                
             </section>
             <nav className="resume">
                 <Header />
 
-                <article className="work row">
-                    
-                        <hr/>
-                    <div>
-                        <h2>Quidax</h2>
-                        <p>Senior Product Designer<br/>
-                        <small>October 2020 - Present</small>
-                        </p>
-                    </div>
-                    
-                </article>
-
+                {works}
                 
             </nav>
             <section className="blank">
