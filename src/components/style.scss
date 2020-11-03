@@ -1,4 +1,5 @@
 $green-color: #022C14;
+$white: #C0CAC4;
 $offset: 97px;
 
 @font-face{
@@ -13,6 +14,8 @@ $offset: 97px;
 .row{
     display: flex;
 }
+
+
 body{
     margin: 0;
     padding: 0;
@@ -80,17 +83,59 @@ body{
     height: 100vh;
     top: 0;
     right: 0;
-    background: rgba($color: red, $alpha: 0.45);
+    color: $green-color;
+    background: rgba($color: black, $alpha: 0.45);
    
    $profile-size: 60%;
     .profile{
-   background: rgba($color: yellow, $alpha: 0.45);
-        width: calc(25% + 457px);
+        background: $white;
+        width: 25%;
         padding-left: 97px;
-        .resume{
-            // background: blue;
-            width: 471px;
+        a{color: $green-color;}
+        // 97px + 45px (height of the menu icon)
+        padding-top: 142px;
+
+        line-height: 28px;
+        .contact{
+            padding: 28px 0 0 28px;
+            .social-icons{
+                display: block;
+                margin-top: 5px;
+            }
+            .cv{
+                align-items: center;
+                img{
+                    margin-left: 10px;
+                }
+            }
+        }
+        .picture img{
+            box-shadow: 8px 8px 0px #022C14;
+        }
+    }
+    .resume{
+        width: 460px;
+        background: $white;
+        hr{
+            width: 40px;
+            background: $green-color;
+            height: 1px;
+            border: none;
             flex-shrink: 0;
+            margin-top: 35px;
+            margin-right: 10px;
+        }
+        .work{
+            div{
+
+            flex-grow: 1;
+            flex-shrink: 1;
+            }
+        }
+        h2{
+            font-family: "GT Haptik";
+            font-weight: normal;
+            margin-block-end: 0em;
         }
         
     }
