@@ -29,22 +29,32 @@ body{
 .landing{
     color: #c0cac4;
     margin-top: 35vh;
+    visibility: hidden;
     
     h1{
         font-size: 58px;
         font-family: "GT Haptik";
         font-weight: 500;
-        line-height: 0;
+        overflow: hidden;
+        span{
+            display: inline-block;
+        }
     }
-    content p{
+    content{
+        margin-top: -50px;
+        p{
       
-        line-height: 28px;
-        font-weight: 200;
-    }
+            line-height: 28px;
+            font-weight: 200;
+        }
+    } 
 }
 
 .main-header{
-    margin-top: 85px;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    top: 85px;
 }
 
 .inner{
@@ -86,6 +96,10 @@ body{
     right: 0;
     color: $green-color;
     background: rgba($color: black, $alpha: 0.45);
+    z-index: 10;
+    visibility: hidden;
+    // opacity: 0;
+    transform: translateX(100%);
    
    $profile-size: 60%;
     .profile{
@@ -163,6 +177,7 @@ body{
         content p {line-height: 24px;}
         h1{
         font-size: 28px;
+      
     }}
     footer.social-icons{
         margin-top: 30px;

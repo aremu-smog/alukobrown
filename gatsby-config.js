@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 module.exports = {
   siteMetadata: {
     title: `Aluko Brown`,
@@ -14,8 +16,8 @@ UX design at Stutern.`,
     {
         resolve: `gatsby-source-contentful`,
         options: {
-            spaceId : 'b0zv5j8277bx',
-            accessToken : 'EVFhU5yfc6A4ws1NEacCpO8YtZl5Rl7fx7_v8df3v9g'
+            spaceId : process.env.CONTENTFUL_SPACE_ID,
+            accessToken : process.env.CONTENTFUL_ACCESS_TOKEN
         }
     },
     {

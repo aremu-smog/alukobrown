@@ -2,7 +2,7 @@ import React, {useRef, useEffect} from 'react'
 import {graphql, useStaticQuery} from 'gatsby'
 import Aluko from "../images/AlukoBrown.png"
 
-import {showOverlay} from './animate'
+import {showOverlay, hideOverlay} from './animate'
 
 //Icons
 import LinkedInGreen from "../images/icons/linkedin-green.svg"
@@ -13,16 +13,27 @@ import ArrowRight from "../images/icons/arrow-right.svg"
 
 
 //Components
-import Header from "./header"
+
 import Icon from './icon'
 
-const Menu = ({fill, toggleMenu}) => {
+const Menu = ({openMenu}) => {
 
     const menuRef = useRef(null)
+    const resumeRef = useRef(null)
+    
+    useEffect(()=> {
+        
+        
+        if(!openMenu){
+            hideOverlay(menuRef.current, resumeRef.current.children)
+        }else{
+            showOverlay(menuRef.current, resumeRef.current.children)
+        }
+    },[openMenu])
+  
+    
 
-    useEffect(()=>{
-        showOverlay(menuRef.current)
-    }, [])
+    
     const allResume = useStaticQuery( graphql `
     query{
         allContentfulResume(sort: {
@@ -31,6 +42,7 @@ const Menu = ({fill, toggleMenu}) => {
         }) {
             edges {
                 node{
+                    id
                     company
                     role
                     startDate
@@ -42,7 +54,9 @@ const Menu = ({fill, toggleMenu}) => {
     
     `)
 
-    const works = allResume.allContentfulResume.edges.map( resume => <article className="work row">
+
+    const works = allResume.allContentfulResume.edges.map( (resume, index) => 
+            <article key={index} className="work row" >
                     
                         <hr/>
                     <div>
@@ -52,7 +66,9 @@ const Menu = ({fill, toggleMenu}) => {
                         </p>
                     </div>
                     
-                </article>)
+    </article>
+      
+    )
     return(
         <div className="overlay-menu row" ref={menuRef}>
             
@@ -74,7 +90,7 @@ const Menu = ({fill, toggleMenu}) => {
                 </div>
                
             </section>
-            <nav className="resume">
+            <nav className="resume" ref={resumeRef}>
                 {/* <Header fill={fill} toggleMenu={toggleMenu}/> */}
 
                 {works}
