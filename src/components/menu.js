@@ -71,7 +71,8 @@ const Menu = ({openMenu}) => {
     )
     return(
         <div className="overlay-menu row" ref={menuRef}>
-            
+            <div className="menu_inner row">
+
             <section className="profile">
                 <div className="picture">
                     <img src={Aluko} alt="Aluko Brown" />
@@ -91,13 +92,13 @@ const Menu = ({openMenu}) => {
                
             </section>
             <nav className="resume" ref={resumeRef}>
-                {/* <Header fill={fill} toggleMenu={toggleMenu}/> */}
+        
 
                 {works}
                 
             </nav>
+            </div>
             <section className="blank">
-
             </section>
 
         </div>

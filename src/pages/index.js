@@ -15,10 +15,10 @@ const IndexPage = () => {
     const [menu, setMenu] = useState(false)
     const [fill, setFill ] = useState("#C0CAC4")
 
-    // useEffect(()=> {
-    //   rollIcon(icon.current)  
-    // })
     const icon = useRef()
+    useEffect(()=> {
+      rollIcon(icon.current)  
+    },[])
 
     const menuRef = useRef(null)
     const toggleMenu = () => {
