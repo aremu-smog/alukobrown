@@ -13,7 +13,7 @@ const Landing = ()=> {
     return(
         <main>
             <article className="inner">
-                <Header />  
+                {/* <Header />   */}
             </article>
         <section className="landing">
             

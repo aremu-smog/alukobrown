@@ -1,6 +1,8 @@
-import React from 'react'
+import React, {useRef, useEffect} from 'react'
 import {graphql, useStaticQuery} from 'gatsby'
 import Aluko from "../images/AlukoBrown.png"
+
+import {showOverlay} from './animate'
 
 //Icons
 import LinkedInGreen from "../images/icons/linkedin-green.svg"
@@ -14,7 +16,13 @@ import ArrowRight from "../images/icons/arrow-right.svg"
 import Header from "./header"
 import Icon from './icon'
 
-const Menu = () => {
+const Menu = ({fill, toggleMenu}) => {
+
+    const menuRef = useRef(null)
+
+    useEffect(()=>{
+        showOverlay(menuRef.current)
+    }, [])
     const allResume = useStaticQuery( graphql `
     query{
         allContentfulResume(sort: {
@@ -46,7 +54,7 @@ const Menu = () => {
                     
                 </article>)
     return(
-        <div className="overlay-menu row">
+        <div className="overlay-menu row" ref={menuRef}>
             
             <section className="profile">
                 <div className="picture">
@@ -67,7 +75,7 @@ const Menu = () => {
                
             </section>
             <nav className="resume">
-                <Header />
+                {/* <Header fill={fill} toggleMenu={toggleMenu}/> */}
 
                 {works}
                 
