@@ -1,5 +1,5 @@
 import React,{useState, useRef, useEffect} from "react"
-import {gsap} from 'gsap'
+// import {gsap} from 'gsap'
 import "../components/style.scss"
 
 
@@ -20,7 +20,7 @@ const IndexPage = () => {
       rollIcon(icon.current)  
     },[])
 
-    const menuRef = useRef(null)
+
     const toggleMenu = () => {
         if(menu){
             setFill("#C0CAC4")

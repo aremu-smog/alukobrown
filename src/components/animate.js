@@ -46,7 +46,6 @@ export const hideOverlay = (menu, work) => {
     
 }
 
-const icon_tl = new TimelineMax()
 export const rollIcon = (icon) => {
     
     gsap.to(icon, {rotate: '360deg', duration: 1, ease: "power3.inOut"})

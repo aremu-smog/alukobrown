@@ -87,7 +87,7 @@ const Menu = ({openMenu}) => {
                     <Icon alt="Dribble" icon={DribbleGreen} url="https://www.linkedin.com/in/aluko-brown/" /></span>
                     
                    
-                    <p><a href="#" className="row cv" target="_blank">View my CV <img src={ArrowRight} alt="Arrow Right" /></a></p>
+                    <p><a href="https://alukobrown.com" rel="noreferrer" className="row cv" target="_blank">View my CV <img src={ArrowRight} alt="Arrow Right" /></a></p>
                 </div>
                
             </section>
