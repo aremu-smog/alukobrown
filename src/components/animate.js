@@ -46,15 +46,13 @@ export const hideOverlay = (menu, work) => {
     
 }
 
-export const rollIcon = (icon) => {
-    
-    gsap.to(icon, {rotate: '360deg', duration: 1, ease: "power3.inOut"})
-   
-    
-}
-export const rollOut = (icon) => {
-    
-    gsap.to(icon, {rotate: '0deg', duration: 1,  ease: "power3.inOut"})
 
-}
+// export const rollIcon = (icon, rolling) => {
+//     if(rolling){
+//         icon_tl.pause()
+//     }else{
+//         icon_tl.play()
+//     }
+// }
+
 

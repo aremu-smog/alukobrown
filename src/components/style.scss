@@ -64,6 +64,22 @@ body{
     width: 100%;
     top: 85px;
     padding-left: calc(25% + 97px);
+    svg{
+
+        &:hover{
+            animation: soro_soke_werey 0.8s linear infinite;
+        }
+
+        /* Animation to rotate icon */
+        @keyframes soro_soke_werey{
+         from{
+             transform: rotate(0deg);
+         }to{
+             transform: rotate(360deg);
+         }
+
+        }
+    }
 }
 
 .inner{
