@@ -8,6 +8,7 @@ import Menu from "../components/menu"
 
 
 import SEO from "../components/seo"
+import Cursor from "../components/cursor"
 
 const IndexPage = () => {
 
@@ -29,6 +30,7 @@ const IndexPage = () => {
     return(
         <div>
         <SEO title="Home"/>
+        <Cursor />
         <Header fill={fill} toggleMenu={toggleMenu} />
         <Menu  openMenu={menu}/>
         <Landing />
