@@ -1,30 +1,30 @@
 import React, { useEffect, useRef } from 'react'
-import gsap from "gsap"
-import CSSRulePlugin from 'gsap/CSSRulePlugin'
+// import gsap from "gsap"
+// import CSSRulePlugin from 'gsap/CSSRulePlugin'
 const Cursor = () => {
     const cursor = useRef()
-    const follower = CSSRulePlugin.getRule(".cursor:after")
+    // const follower = CSSRulePlugin.getRule(".cursor:after")
 
     
     useEffect(()=> {
 
-        const return_int_of = (string) => {
-            return typeof(string) === "string" ? parseInt(string, 10) : string
+        // const return_int_of = (string) => {
+        //     return typeof(string) === "string" ? parseInt(string, 10) : string
 
-        }
+        // }
         
         document.addEventListener("mousemove", (e)=> {
-            const prev_top = return_int_of(cursor.current.style.top)
-            const prev_left = return_int_of(cursor.current.style.left)
+            // const prev_top = return_int_of(cursor.current.style.top)
+            // const prev_left = return_int_of(cursor.current.style.left)
 
-            const new_top = e.clientY
-            const new_left = e.clientX
+            // const new_top = e.clientY
+            // const new_left = e.clientX
 
             //Change in Y position
-            const d_top = new_top - prev_top
+            // const d_top = new_top - prev_top
 
             // //Change in X position
-            const d_left = new_left - prev_left
+            // const d_left = new_left - prev_left
 
             // const angle = Math.round(Math.atan(d_left/d_top))
 
