@@ -2,10 +2,9 @@ require('dotenv').config()
 
 module.exports = {
   siteMetadata: {
-    title: `Aluko Brown`,
+    title: `Aluko Brown — Product Designer`,
     description: `I’m a Product Designer based in Lagos, Nigeria, with over 
 5 years experience designing tasteful experiences for brands, products & services and a background in graphic & brand design. 
-
 I currently work on the Product team at Quidax and teach 
 UX design at Stutern.`,
     author: `Aremu Smog`,

@@ -29,7 +29,7 @@ const IndexPage = () => {
   
     return(
         <div>
-        <SEO title="Home"/>
+        <SEO />
         <Cursor />
         <Header fill={fill} toggleMenu={toggleMenu} />
         <Menu  openMenu={menu}/>

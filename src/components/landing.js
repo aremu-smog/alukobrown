@@ -28,8 +28,8 @@ const Landing = ()=> {
         // console.log(introText)
         gsap.set(landing.current, {visibility: "visible"})
 
-        master.from(intro.current.children, {y: 50, autoAlpha:0, duration: 1, stagger: 0.2})
-        .from(line.current,{width: 0})
+        master.from(intro.current.children, {y: 50, autoAlpha:0, duration: 0.8, stagger: 0.2})
+        .from(line.current,{width: 0, duration: 0.3})
         .from(info.current,{x: -10, autoAlpha: 0})
 
     }, [])
