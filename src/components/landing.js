@@ -50,8 +50,8 @@ const Landing = ()=> {
                         <p >I’m a Product Designer based in Lagos, Nigeria, with over 
 5 years experience designing tasteful experiences for brands, products & services and a background in graphic & brand design.</p> 
 
-<p>I currently work on the Product team at Quidax and teach 
-UX design at Stutern.</p>
+<p>I currently work on the Product team at <a href="https://www.quidax.com" target="_blank" rel="noreferrer" >Quidax</a> and teach 
+UX design at <a href="https://www.stutern.com" target="_blank" rel="noreferrer">Stutern</a>.</p>
 <footer className="social-icons">
     <Icon alt="LinkedIn" icon={LinkedInWhite} url="https://www.linkedin.com/in/aluko-brown/" />
     <Icon alt="Twitter" icon={TwitterWhite} url="https://twitter.com/AlukoBrown" />

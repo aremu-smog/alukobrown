@@ -32,14 +32,14 @@ export const hideOverlay = (menu, work) => {
     close.to(work, {
         autoAlpha: 0,
         y: 0,
-        duration: 1,
+        duration: 0.25,
         stagger: {
-            amount: 0.7
+            amount: 0.5
         }
     }).to(menu, {
         // autoAlpha: 0,
-        x: '100%',
-        duration: 0.7,
+        x: '-100%',
+        duration: 1,
         ease: 'power2.out'
     })
 
