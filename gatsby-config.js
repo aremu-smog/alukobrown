@@ -1,4 +1,4 @@
-require('dotenv').config()
+require("dotenv").config()
 
 module.exports = {
   siteMetadata: {
@@ -13,11 +13,11 @@ UX design at Stutern.`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     {
-        resolve: `gatsby-source-contentful`,
-        options: {
-            spaceId : process.env.CONTENTFUL_SPACE_ID,
-            accessToken : process.env.CONTENTFUL_ACCESS_TOKEN
-        }
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
@@ -34,10 +34,11 @@ UX design at Stutern.`,
         name: `gatsby-starter-default`,
         short_name: `starter`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-         // This path is relative to the root of the site.
+        background_color: `#022C14`,
+        theme_color: `#022C14`,
+        display: `standalone`,
+        icon: `src/images/gatsby-icon.png`,
+        // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
