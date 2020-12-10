@@ -59,32 +59,34 @@ a {
 }
 
 .cursor {
-  width: 10px;
-  height: 10px;
-  background-color: $white;
-  mix-blend-mode: difference;
-  position: absolute;
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 1000;
-  transition-duration: 0.1s;
-  // transition-timing-function: ease-out;
-}
-.cursor::after {
-  content: "";
+
   width: 30px;
   height: 30px;
   border-radius: 50%;
   display: block;
   border: 1px solid white;
   position: relative;
-
+  position: absolute;
   transform-origin: 50% 50%;
-  top: -115%;
-  left: -110%;
-  // transform: rotate(-30deg);
-  // transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  mix-blend-mode: difference;
+  z-index: 1000;
+  pointer-events: none;
+  // transition-timing-function: ease-out;
+  
 }
+.cursorInner{
+  width: 10px;
+height: 10px;
+background-color: $white;
+mix-blend-mode: difference;
+position: absolute;
+border-radius: 50%;
+pointer-events: none;
+z-index: 1000;
+transition-duration: 0.05s;
+}
+
 @keyframes follower {
   0% {
     width: 50px;
