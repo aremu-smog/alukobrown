@@ -12,6 +12,8 @@ const IndexPage = () => {
   const [menu, setMenu] = useState(false)
   const [fill, setFill] = useState("#C0CAC4")
 
+  const [mouseColor, setMouseColor] = useState("#C0CAC4")
+
   const toggleMenu = () => {
     if (menu) {
       setFill("#C0CAC4")
@@ -24,10 +26,10 @@ const IndexPage = () => {
   return (
     <div>
       <SEO title="" />
-      <Cursor />
+      <Cursor mouseColor={mouseColor} />
       <Header fill={fill} toggleMenu={toggleMenu} />
-      <Menu openMenu={menu} />
-      <Landing />
+      <Menu openMenu={menu} changeMouse={(color)=>setMouseColor(color)} />
+      <Landing changeMouse={(color)=>setMouseColor(color)} />
     </div>
   )
 }

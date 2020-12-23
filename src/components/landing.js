@@ -12,7 +12,7 @@ import { gsap, TimelineMax } from "gsap"
 
 import Icon from "./icon"
 
-const Landing = () => {
+const Landing = ({changeMouse}) => {
   const line = useRef(null)
   const intro = useRef(null)
   const info = useRef(null)
@@ -35,7 +35,7 @@ const Landing = () => {
       .from(info.current, { x: -10, autoAlpha: 0 })
   }, [])
   return (
-    <main>
+    <main onMouseOver={()=>changeMouse("#c0cac4")}>
       <article className="inner"></article>
       <section className="landing" ref={landing}>
         <article className="inner">

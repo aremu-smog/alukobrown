@@ -33,7 +33,7 @@ a {
 
 .landing {
   color: #c0cac4;
-  margin-top: 47vh;
+  padding-top: 37vh;
   visibility: hidden;
 
   h1 {
@@ -64,12 +64,14 @@ a {
   height: 30px;
   border-radius: 50%;
   display: block;
-  border: 1px solid white;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $white;
   position: relative;
   position: absolute;
   transform-origin: 50% 50%;
   transition-duration: 0.1s;
-  mix-blend-mode: difference;
+  // mix-blend-mode: difference;
   z-index: 1000;
   pointer-events: none;
   // transition-timing-function: ease-out;
@@ -77,14 +79,14 @@ a {
 }
 .cursorInner{
   width: 10px;
-height: 10px;
-background-color: $white;
-mix-blend-mode: difference;
-position: absolute;
-border-radius: 50%;
-pointer-events: none;
-z-index: 1000;
-transition-duration: 0.05s;
+  height: 10px;
+  background-color: $white;
+  // mix-blend-mode: difference;
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1000;
+  transition-duration: 0.05s;
 }
 
 @keyframes follower {
@@ -178,6 +180,7 @@ transition-duration: 0.05s;
     height: 100vh;
     padding-top: 142px;
     justify-content: space-between;
+    flex-shrink: 0;
     .profile {
       a {
         color: $green-color;
@@ -243,12 +246,16 @@ transition-duration: 0.05s;
       }
     }
   }
+  .blank{
+    width: 100%;
+    flex-shrink: 1;
+  }
 }
 
 //Mobile
 
 @media (max-width: 468px) {
-  .cursor {
+  .cursor, .cursorInner {
     display: none;
   }
   body {
@@ -266,7 +273,7 @@ transition-duration: 0.05s;
     margin-right: 15%;
   }
   .landing {
-    margin-top: 30vh;
+    padding-top: 30vh;
     content {
       margin-top: -20px;
       p {

@@ -15,7 +15,7 @@ import ArrowRight from "../images/icons/arrow-right.svg"
 
 import Icon from "./icon"
 
-const Menu = ({ openMenu }) => {
+const Menu = ({ openMenu, changeMouse }) => {
   const menuRef = useRef(null)
   const resumeRef = useRef(null)
 
@@ -59,8 +59,8 @@ const Menu = ({ openMenu }) => {
     </article>
   ))
   return (
-    <div className="overlay-menu row" ref={menuRef}>
-      <div className="menu_inner row">
+    <div className="overlay-menu row" ref={menuRef} >
+      <div className="menu_inner row" role="link" tabIndex="0" onMouseOver={()=>changeMouse("#022c14")} onFocus={()=>changeMouse("#022c14")}>
         <section className="profile">
           <div className="picture">
             <img src={Aluko} alt="Aluko Brown" />
@@ -108,7 +108,7 @@ const Menu = ({ openMenu }) => {
           {works}
         </nav>
       </div>
-      <section className="blank"></section>
+      <div className="blank"  role="link"  tabIndex="0" onMouseOver={()=>changeMouse("#c0cac4")} onFocus={()=>changeMouse("#c0cac4")}></div>
     </div>
   )
 }
