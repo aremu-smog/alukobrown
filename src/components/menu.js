@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import Aluko from "../images/AlukoBrown.png"
+// import Aluko from "../images/AlukoBrown.png"
 
 import { showOverlay, hideOverlay } from "./animate"
 
@@ -27,8 +27,8 @@ const Menu = ({ openMenu, changeMouse }) => {
     }
   }, [openMenu])
 
-  const allResume = useStaticQuery(graphql`
-    query {
+  const data = useStaticQuery(graphql
+    `query {
       allContentfulResume(sort: { fields: updatedAt, order: DESC }) {
         edges {
           node {
@@ -40,10 +40,21 @@ const Menu = ({ openMenu, changeMouse }) => {
           }
         }
       }
-    }
-  `)
 
-  const works = allResume.allContentfulResume.edges.map((resume, index) => (
+      contentfulProfileImage{
+        picture{
+          file{
+            url
+          }
+        }
+      }
+    }`
+    
+  )
+
+  const Aluko = data.contentfulProfileImage.picture.file.url
+
+  const works = data.allContentfulResume.edges.map((resume, index) => (
     <article key={index} className="work row">
       <hr />
       <div>
