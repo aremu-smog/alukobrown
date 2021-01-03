@@ -51,31 +51,15 @@ const Landing = ({changeMouse}) => {
             </div>
             <div ref={info}>
               <p>
-                I’m a Brand & Product Designer based in Lagos, Nigeria, with
-                over 5 years experience designing tasteful experiences for
-                brands, products & services and a background in graphic & brand
-                design.
+              A Brand & Product Designer based in Lagos, Nigeria, with about 5 years experience designing tasteful experiences for brands, products & services.
+              </p>
+              <p>My work experience cuts across brand identity and communication design, product design and UI/UX, art direction and campaigns.
               </p>
 
-              <p>
-                I currently work on the Product team at{" "}
-                <a
-                  href="https://www.quidax.com"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Quidax
-                </a>{" "}
-                and teach UX design at{" "}
-                <a
-                  href="https://www.stutern.com"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Stutern
-                </a>
-                .
+              <p>I currently work on the Product team at <a href="https://www.quidax.com/" target="_blank" rel="noreferrer">Quidax</a>, also as a Design Partner at <a href="https://fourthcanvas.co/" target="_blank" rel="noreferrer">FourthCanvas</a> and I teach UX design at <a href="https://stutern.com/" target="_blank" rel="noreferrer">Stutern</a>.
               </p>
+
+        
               <footer className="social-icons">
                 <Icon
                   alt="LinkedIn"
