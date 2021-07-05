@@ -27,8 +27,8 @@ const Menu = ({ openMenu, changeMouse }) => {
     }
   }, [openMenu])
 
-  const data = useStaticQuery(graphql
-    `query {
+  const data = useStaticQuery(graphql`
+    query {
       allContentfulResume(sort: { fields: updatedAt, order: DESC }) {
         edges {
           node {
@@ -41,16 +41,15 @@ const Menu = ({ openMenu, changeMouse }) => {
         }
       }
 
-      contentfulProfileImage{
-        picture{
-          file{
+      contentfulProfileImage {
+        picture {
+          file {
             url
           }
         }
       }
-    }`
-    
-  )
+    }
+  `)
 
   const Aluko = data.contentfulProfileImage.picture.file.url
 
@@ -70,8 +69,14 @@ const Menu = ({ openMenu, changeMouse }) => {
     </article>
   ))
   return (
-    <div className="overlay-menu row" ref={menuRef} >
-      <div className="menu_inner row" role="link" tabIndex="0" onMouseOver={()=>changeMouse("#022c14")} onFocus={()=>changeMouse("#022c14")}>
+    <div className="overlay-menu row" ref={menuRef}>
+      <div
+        className="menu_inner row"
+        role="link"
+        tabIndex="0"
+        onMouseOver={() => changeMouse("#022c14")}
+        onFocus={() => changeMouse("#022c14")}
+      >
         <section className="profile">
           <div className="picture">
             <img src={Aluko} alt="Aluko Brown" />
@@ -112,14 +117,29 @@ const Menu = ({ openMenu, changeMouse }) => {
               >
                 View my CV <img src={ArrowRight} alt="Arrow Right" />
               </a>
+              <a
+                href="https://drive.google.com/file/d/1-NG2ku-ZHZLglKYCcjr6WlFaL9lqyp_r/view?usp=drivesdk"
+                rel="noreferrer"
+                className="row cv"
+                target="_blank"
+              >
+                View my portfolio <img src={ArrowRight} alt="Arrow Right" />
+              </a>
             </p>
+            <p></p>
           </div>
         </section>
         <nav className="resume" ref={resumeRef}>
           {works}
         </nav>
       </div>
-      <div className="blank"  role="link"  tabIndex="0" onMouseOver={()=>changeMouse("#c0cac4")} onFocus={()=>changeMouse("#c0cac4")}></div>
+      <div
+        className="blank"
+        role="link"
+        tabIndex="0"
+        onMouseOver={() => changeMouse("#c0cac4")}
+        onFocus={() => changeMouse("#c0cac4")}
+      ></div>
     </div>
   )
 }
