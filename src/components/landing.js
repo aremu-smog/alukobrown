@@ -12,7 +12,7 @@ import { gsap, TimelineMax } from "gsap"
 
 import Icon from "./icon"
 
-const Landing = ({changeMouse}) => {
+const Landing = ({ changeMouse }) => {
   const line = useRef(null)
   const intro = useRef(null)
   const info = useRef(null)
@@ -35,7 +35,7 @@ const Landing = ({changeMouse}) => {
       .from(info.current, { x: -10, autoAlpha: 0 })
   }, [])
   return (
-    <main onMouseOver={()=>changeMouse("#c0cac4")}>
+    <main onMouseOver={() => changeMouse("#c0cac4")}>
       <article className="inner"></article>
       <section className="landing" ref={landing}>
         <article className="inner">
@@ -51,15 +51,43 @@ const Landing = ({changeMouse}) => {
             </div>
             <div ref={info}>
               <p>
-              A Brand & Product Designer based in Lagos, Nigeria, with about 5 years experience designing tasteful experiences for brands, products & services.
+                A Brand & Product Designer based in Lagos, Nigeria, with about 6
+                years experience designing tasteful experiences for brands,
+                products & services.
               </p>
-              <p>My work experience cuts across brand identity and communication design, product design and UI/UX, art direction and campaigns.
+              <p>
+                My work experience cuts across brand identity and communication
+                design, product design and UI/UX, art direction and campaigns.
               </p>
 
-              <p>I currently work on the Product team at <a href="https://www.quidax.com/" target="_blank" rel="noreferrer">Quidax</a>, also as a Design Partner at <a href="https://fourthcanvas.co/" target="_blank" rel="noreferrer">FourthCanvas</a> and I teach UX design at <a href="https://stutern.com/" target="_blank" rel="noreferrer">Stutern</a>.
+              <p>
+                I currently work on the Product team at{" "}
+                <a
+                  href="https://www.quidax.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Quidax
+                </a>
+                , also as a Product Designer on{" "}
+                <a
+                  href="https://www.toptal.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Toptal
+                </a>{" "}
+                and Design Partner at{" "}
+                <a
+                  href="https://fourthcanvas.co/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  FourthCanvas
+                </a>
+                .
               </p>
 
-        
               <footer className="social-icons">
                 <Icon
                   alt="LinkedIn"
