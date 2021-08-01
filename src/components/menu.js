@@ -117,14 +117,15 @@ const Menu = ({ openMenu, changeMouse }) => {
               >
                 View my CV <img src={ArrowRight} alt="Arrow Right" />
               </a>
-              <a
+
+              {/* <a
                 href="https://drive.google.com/file/d/1-NG2ku-ZHZLglKYCcjr6WlFaL9lqyp_r/view?usp=drivesdk"
                 rel="noreferrer"
                 className="row cv"
                 target="_blank"
               >
                 View my portfolio <img src={ArrowRight} alt="Arrow Right" />
-              </a>
+              </a> */}
             </p>
             <p></p>
           </div>
