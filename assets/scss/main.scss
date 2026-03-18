@@ -4,7 +4,7 @@ $offset: 97px;
 
 @font-face {
   font-family: "GT Haptik";
-  src: url("../fonts/GT-Haptik-Medium.otf");
+  src: url("~/assets/fonts/GT-Haptik-Medium.otf");
 }
 @import url("https://fonts.googleapis.com/css2?family=Karla&display=swap");
 
@@ -45,7 +45,7 @@ a {
       display: inline-block;
     }
   }
-  content {
+  .content {
     margin-top: -50px;
     p {
       line-height: 28px;
@@ -59,7 +59,6 @@ a {
 }
 
 .cursor {
-
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -75,9 +74,8 @@ a {
   z-index: 1000;
   pointer-events: none;
   // transition-timing-function: ease-out;
-  
 }
-.cursorInner{
+.cursorInner {
   width: 10px;
   height: 10px;
   background-color: $white;
@@ -247,7 +245,7 @@ a {
       }
     }
   }
-  .blank{
+  .blank {
     width: 100%;
     flex-shrink: 1;
   }
@@ -256,7 +254,8 @@ a {
 //Mobile
 
 @media (max-width: 468px) {
-  .cursor, .cursorInner {
+  .cursor,
+  .cursorInner {
     display: none;
   }
   body {
@@ -275,7 +274,7 @@ a {
   }
   .landing {
     padding-top: 25vh;
-    content {
+    .content {
       margin-top: -20px;
       p {
         line-height: 24px;
@@ -314,7 +313,6 @@ a {
       height: auto;
       .profile {
         width: auto;
-       
       }
       .resume {
         margin-top: -1px;

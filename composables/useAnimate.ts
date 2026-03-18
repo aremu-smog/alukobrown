@@ -1,13 +1,11 @@
-import { gsap, TimelineMax } from "gsap"
+import { gsap } from "gsap"
 
-export const showOverlay = (menu, work) => {
-  // alert(menu)
+export const showOverlay = (menu: HTMLElement, work: HTMLCollection) => {
   gsap.set(menu, { visibility: "visible" })
-  const open = new TimelineMax()
+  const open = gsap.timeline()
 
   open
     .to(menu, {
-      // autoAlpha: 1,
       x: "0%",
       duration: 1,
       ease: "power2.out",
@@ -15,18 +13,14 @@ export const showOverlay = (menu, work) => {
     .to(work, {
       autoAlpha: 1,
       y: 20,
-
       stagger: {
         amount: 0.7,
       },
     })
 }
-// export const playAnimation = () =>{
-//     tl.resume()
 
-// }
-export const hideOverlay = (menu, work) => {
-  const close = new TimelineMax({
+export const hideOverlay = (menu: HTMLElement, work: HTMLCollection) => {
+  const close = gsap.timeline({
     onComplete: () => {
       gsap.set(menu, { visibility: "hidden" })
     },
@@ -42,17 +36,8 @@ export const hideOverlay = (menu, work) => {
       },
     })
     .to(menu, {
-      // autoAlpha: 0,
       x: "-100%",
       duration: 1,
       ease: "power2.out",
     })
 }
-
-// export const rollIcon = (icon, rolling) => {
-//     if(rolling){
-//         icon_tl.pause()
-//     }else{
-//         icon_tl.play()
-//     }
-// }

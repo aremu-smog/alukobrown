@@ -54,9 +54,12 @@ typings/
 # dotenv environment variable files
 .env
 
-# gatsby files
-.cache/
-public
+# Nuxt dev/build outputs
+.output
+.nuxt
+.nitro
+.cache
+dist
 
 # Mac files
 .DS_Store
