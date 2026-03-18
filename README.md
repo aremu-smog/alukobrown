@@ -1,7 +1,7 @@
 # Aluko Brown's Personal Website
 
 ### Tech Stack
-[Frontend - Gatsby](https://gatsbyjs.org)
+[Frontend - Nuxt](https://nuxt.com)
 
 [CMS - Contentful](https://contenful.com)
 
